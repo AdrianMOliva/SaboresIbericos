@@ -1,6 +1,17 @@
 .footer {
+  display: flex;
   background-color: rgb(187, 125, 60, 255);
   padding: 4px 0;
-  text-align: center;
-  height: auto;
+  justify-content: center;
+  height: 40px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  align-items: center;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
 }

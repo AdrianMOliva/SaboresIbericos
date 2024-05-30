@@ -4,15 +4,17 @@
   border-bottom: 5px solid #bb7d3c;
   height: 110px;
   width: 100%;
-  /*align-items: center;*/
+  align-items: center;
 
   justify-content: center;
 }
 
 .lightLogo {
+  position: fixed;
   width: 110px;
   height: 110px;
-
+  left: 0;
+  top: 0;
   align-items: left;
 }
 
@@ -20,6 +22,7 @@
   color: #bb7d3c;
   font-weight: bold;
   align-items: center;
+  margin-right: 50px;
 }
 
 .spanishTitle {
@@ -30,7 +33,9 @@
 .logosDiv {
   display: flex;
   background-color: #fbf3f3;
-
+  position: fixed;
+  right: 0;
+  top: 0;
   height: 110px;
 
   justify-content: space-between;
