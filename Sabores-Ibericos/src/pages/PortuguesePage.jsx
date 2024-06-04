@@ -13,7 +13,6 @@ function PortuguesePage({ food }) {
     meal.foodName.toLowerCase().includes(search.toLowerCase())
   );
 
-  console.log(portugueseFood);
   return (
     <>
       <Navbar />
