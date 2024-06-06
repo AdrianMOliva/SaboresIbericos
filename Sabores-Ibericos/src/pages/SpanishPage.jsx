@@ -3,9 +3,19 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import SearchBar from "../components/SearchBar";
 import "./SpanishPage.css";
+import favouriteImg from "../assets/FavouriteImg.png";
 
 function SpanishPage({ food }) {
   const [search, setSearch] = useState("");
+  const [toggledButtons, setToggledButtons] = useState(
+    Array(food.length).fill(false)
+  );
+
+  const handleChange = (index) => {
+    const newToggledButtons = [...toggledButtons];
+    newToggledButtons[index] = !newToggledButtons[index];
+    setToggledButtons(newToggledButtons);
+  };
 
   const spanishFood = food.filter((meal) => meal.country === "Spain");
 
@@ -13,7 +23,6 @@ function SpanishPage({ food }) {
     meal.foodName.toLowerCase().includes(search.toLowerCase())
   );
 
-  console.log(spanishFood);
   return (
     <>
       <Navbar />
@@ -23,6 +32,14 @@ function SpanishPage({ food }) {
       <div className="cardContainer">
         {filteredFood.map((meal, i) => (
           <div className="card" key={i}>
+            <button
+              onClick={() => {
+                handleChange(i);
+              }}
+              className={`btn-like ${toggledButtons[i] ? "on" : "off"}`}
+            >
+              <img src={favouriteImg} alt="like" />
+            </button>
             <img className="cardImg" src={meal.image} alt={meal.foodName} />
             <div className="cardInfo">
               <h3>{meal.foodName}</h3>
