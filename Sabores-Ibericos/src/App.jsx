@@ -29,9 +29,9 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<PortuguesePage food={food} />} />
-        <Route path="/SpanishFood" element={<SpanishPage food={food} />} />
+        <Route path="/spanish-food" element={<SpanishPage food={food} />} />
         <Route path="*" element={<NotFoundPage />} />
-        <Route path="about" element={<AboutPage />} />
+        <Route path="/about" element={<AboutPage />} />
       </Routes>
     </>
   );

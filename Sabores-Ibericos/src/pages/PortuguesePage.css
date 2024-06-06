@@ -37,3 +37,37 @@
   color: #777;
   font-size: 14px;
 }
+
+.btn-like {
+  border: none;
+  text-decoration: none;
+  background-color: #d4d3d3;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  padding-top: 4px;
+  margin: 0 auto;
+  position: absolute;
+}
+
+.btn-like:hover {
+  transition: 0.2s;
+  background-color: #a9a7a7;
+}
+
+.btn-like img {
+  width: 18px;
+  height: 18px;
+}
+
+.btn-like.on {
+  background-color: #fd9a9a;
+}
+
+.btn-like.off {
+  background-color: #d4d3d3;
+}

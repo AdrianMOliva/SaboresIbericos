@@ -47,3 +47,7 @@
   justify-content: space-between;
   align-items: right;
 }
+
+.logosDiv img {
+  height: 110px;
+}

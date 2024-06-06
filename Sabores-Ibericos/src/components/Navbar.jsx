@@ -12,13 +12,15 @@ function Navbar() {
       <Link to={"/"}>
         <h1 className="portugueseTitle">Portuguese</h1>
       </Link>
-      <Link to={"/SpanishFood"}>
+      <Link to={"/spanish-food"}>
         <h1 className="spanishTitle">Spanish</h1>
       </Link>
       <div className="logosDiv">
         <img src={heart} alt="heart" />
         <img src={add} alt="add food" />
-        <img src={questionMark} alt="question Mark" />
+        <Link to={"/about"}>
+          <img style={{}} src={questionMark} alt="question Mark" />
+        </Link>
       </div>
     </div>
   );

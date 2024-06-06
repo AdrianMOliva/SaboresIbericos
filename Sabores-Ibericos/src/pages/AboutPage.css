@@ -33,3 +33,22 @@
   width: 60%;
   text-align: center;
 }
+
+.imgDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.imgDiv div {
+  margin-right: 50px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.imgDiv img {
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+}
