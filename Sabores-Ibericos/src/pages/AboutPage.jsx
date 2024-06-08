@@ -6,7 +6,6 @@ import Navbar from "../components/Navbar";
 function AboutPage() {
   return (
     <>
-      <Navbar />
       <div className="aboutPage">
         <h2> Welcome to Sabores Ibéricos!</h2>
         <br></br>

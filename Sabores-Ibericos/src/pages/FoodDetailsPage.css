@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  background-color: #fbf3f3;
+}
+
+.pageContainer {
+  display: flex;
+  flex-direction: row;
+
+  padding: 20px;
+
+  border: 1.5px solid #bb7d3c;
+  width: 80%;
+  height: auto;
+}
+
+.pageContainer img {
+  width: 40%;
+  height: auto;
+  padding: 20px;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-right: 20px;
+  margin-top: 0;
+}
+
+.backButton {
+  width: 200px;
+  height: 30px;
+  align-self: flex-end;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: azure;
+  font-weight: bold;
+}
+
+.backButton:hover {
+  background-color: #bb7d3c;
+}
+
+.infoContainer span {
+  font-weight: bold;
+}

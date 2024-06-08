@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import SearchBar from "../components/SearchBar";
 import "./SpanishPage.css";
 import favouriteImg from "../assets/FavouriteImg.png";
+import { Link } from "react-router-dom";
 
 function SpanishPage({ food }) {
   const [search, setSearch] = useState("");
@@ -25,8 +26,6 @@ function SpanishPage({ food }) {
 
   return (
     <>
-      <Navbar />
-
       <SearchBar search={search} setSearch={setSearch} />
 
       <div className="cardContainer">
@@ -40,16 +39,19 @@ function SpanishPage({ food }) {
             >
               <img src={favouriteImg} alt="like" />
             </button>
-            <img className="cardImg" src={meal.image} alt={meal.foodName} />
+            <Link to={`/details/${meal.id}`}>
+              <img className="cardImg" src={meal.image} alt={meal.foodName} />
+            </Link>
             <div className="cardInfo">
-              <h3>{meal.foodName}</h3>
+              <Link to={`/details/${meal.id}`}>
+                <h3>{meal.foodName}</h3>
+              </Link>
               <p>Region: {meal.region}</p>
               <p>Meal: {meal.meal}</p>
             </div>
           </div>
         ))}
       </div>
-      <Footer />
     </>
   );
 }

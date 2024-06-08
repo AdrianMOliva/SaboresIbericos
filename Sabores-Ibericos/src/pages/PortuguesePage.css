@@ -26,6 +26,10 @@
   padding: 15px;
 }
 
+.cardInfo a {
+  text-decoration: none;
+}
+
 .cardInfo h3 {
   margin: 0;
   color: #333;

@@ -7,6 +7,10 @@ import { Routes, Route } from "react-router-dom";
 import SpanishPage from "./pages/SpanishPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
+import FoodDetailsPage from "./pages/FoodDetailsPage.jsx";
+import AddFoodPage from "./pages/AddFoodPage.jsx";
+import Navbar from "./components/Navbar.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   const [food, setFood] = useState([]);
@@ -27,12 +31,22 @@ function App() {
 
   return (
     <>
+      <Navbar />
       <Routes>
         <Route path="/" element={<PortuguesePage food={food} />} />
         <Route path="/spanish-food" element={<SpanishPage food={food} />} />
         <Route path="*" element={<NotFoundPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route
+          path="/details/:foodId"
+          element={<FoodDetailsPage food={food} setFood={setFood} />}
+        />
+        <Route
+          path="/add-food"
+          element={<AddFoodPage food={food} setFood={setFood} />}
+        />
       </Routes>
+      <Footer />
     </>
   );
 }

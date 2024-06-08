@@ -4,6 +4,7 @@ import SearchBar from "../components/SearchBar";
 import "./PortuguesePage.css";
 import favouriteImg from "../assets/FavouriteImg.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function PortuguesePage({ food }) {
   const [search, setSearch] = useState("");
@@ -24,7 +25,6 @@ function PortuguesePage({ food }) {
 
   return (
     <>
-      <Navbar />
       <SearchBar search={search} setSearch={setSearch} />
       <div className="cardContainer">
         {filteredFood.map((meal, i) => (
@@ -37,16 +37,19 @@ function PortuguesePage({ food }) {
             >
               <img src={favouriteImg} alt="like" />
             </button>
-            <img className="cardImg" src={meal.image} alt={meal.foodName} />
+            <Link to={`/details/${meal.id}`}>
+              <img className="cardImg" src={meal.image} alt={meal.foodName} />
+            </Link>
             <div className="cardInfo">
-              <h3>{meal.foodName}</h3>
+              <Link to={`/details/${meal.id}`}>
+                <h3>{meal.foodName}</h3>
+              </Link>
               <p>Region: {meal.region}</p>
               <p>Meal: {meal.meal}</p>
             </div>
           </div>
         ))}
       </div>
-      <Footer />
     </>
   );
 }

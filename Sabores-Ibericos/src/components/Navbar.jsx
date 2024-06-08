@@ -17,7 +17,9 @@ function Navbar() {
       </Link>
       <div className="logosDiv">
         <img src={heart} alt="heart" />
-        <img src={add} alt="add food" />
+        <Link to="/add-food">
+          <img src={add} alt="add food" />
+        </Link>
         <Link to={"/about"}>
           <img style={{}} src={questionMark} alt="question Mark" />
         </Link>
