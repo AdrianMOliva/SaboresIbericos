@@ -40,14 +40,14 @@ function PortuguesePage({ food }) {
         `https://sabores-ibericos.adaptable.app/foods/${mealId}`,
         {
           toggled: newToggledButtons[index],
-          country: food.country,
-          foodName: food.foodName,
-          description: food.description,
-          region: food.region,
-          meal: food.meal,
-          image: food.image,
-          national: food.national,
-          restaurants: food.restaurants,
+          country: filteredFood.country,
+          foodName: filteredFood.foodName,
+          description: filteredFood.description,
+          region: filteredFood.region,
+          meal: filteredFood.meal,
+          image: filteredFood.image,
+          national: filteredFood.national,
+          restaurants: filteredFood.restaurants,
         }
       );
 
