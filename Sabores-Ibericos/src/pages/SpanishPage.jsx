@@ -14,12 +14,6 @@ function SpanishPage({ food }) {
     Array(food.length).fill(false)
   );
 
-  const handleChange = (index) => {
-    const newToggledButtons = [...toggledButtons];
-    newToggledButtons[index] = !newToggledButtons[index];
-    setToggledButtons(newToggledButtons);
-  };
-
   const handleDelete = async (id) => {
     try {
       await axios.delete(`https://sabores-ibericos.adaptable.app/foods/${id}`);
@@ -27,6 +21,7 @@ function SpanishPage({ food }) {
       const newFoodList = food.filter((meal) => meal.id !== id);
 
       setToggledButtons(Array(newFoodList.length).fill(false));
+      console.log("success");
     } catch (error) {
       console.error("Error deleting the meal", error);
     }
@@ -37,6 +32,36 @@ function SpanishPage({ food }) {
   const filteredFood = spanishFood.filter((meal) =>
     meal.foodName.toLowerCase().includes(search.toLowerCase())
   );
+
+  const handleChange = async (index) => {
+    const newToggledButtons = [...toggledButtons];
+    newToggledButtons[index] = !newToggledButtons[index];
+
+    try {
+      const mealId = filteredFood[index].id;
+      const response = await axios.put(
+        `https://sabores-ibericos.adaptable.app/foods/${mealId}`,
+        {
+          toggled: newToggledButtons[index],
+          country: food.country,
+          foodName: food.foodName,
+          description: food.description,
+          region: food.region,
+          meal: food.meal,
+          image: food.image,
+          national: food.national,
+          restaurants: food.restaurants,
+        }
+      );
+
+      if (response.status === 200) {
+        setToggledButtons(newToggledButtons);
+      }
+      console.log(response);
+    } catch (error) {
+      console.error("Error updating toggle state:", error);
+    }
+  };
 
   return (
     <>

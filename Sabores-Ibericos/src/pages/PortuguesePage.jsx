@@ -1,5 +1,3 @@
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 import SearchBar from "../components/SearchBar";
 import "./PortuguesePage.css";
 import favouriteImg from "../assets/FavouriteImg.png";
@@ -13,12 +11,6 @@ function PortuguesePage({ food }) {
   const [toggledButtons, setToggledButtons] = useState(
     Array(food.length).fill(false)
   );
-
-  /*const handleChange = (index) => {
-    const newToggledButtons = [...toggledButtons];
-    newToggledButtons[index] = !newToggledButtons[index];
-    setToggledButtons(newToggledButtons);
-  };*/
 
   const handleDelete = async (id) => {
     try {
@@ -43,11 +35,19 @@ function PortuguesePage({ food }) {
     newToggledButtons[index] = !newToggledButtons[index];
 
     try {
+      const mealId = filteredFood[index].id;
       const response = await axios.put(
-        `https://sabores-ibericos.adaptable.app/foods`,
+        `https://sabores-ibericos.adaptable.app/foods/${mealId}`,
         {
-          id: food[index].id,
           toggled: newToggledButtons[index],
+          country: food.country,
+          foodName: food.foodName,
+          description: food.description,
+          region: food.region,
+          meal: food.meal,
+          image: food.image,
+          national: food.national,
+          restaurants: food.restaurants,
         }
       );
 
