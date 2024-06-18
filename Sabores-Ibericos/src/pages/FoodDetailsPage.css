@@ -39,10 +39,13 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: azure;
   font-weight: bold;
+  font-size: 12px;
+  color: black;
 }
 
 .backButton:hover {
   background-color: #bb7d3c;
+  color: white;
 }
 
 .infoContainer span {

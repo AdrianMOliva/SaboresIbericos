@@ -71,3 +71,30 @@
 .btn-like.off {
   background-color: #d4d3d3;
 }
+
+.deleteButton {
+  border: none;
+  text-decoration: none;
+  background-color: #d4d3d3;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  padding-top: 4px;
+  margin: 0 auto;
+  position: absolute;
+  margin-left: 332px;
+}
+
+.deleteButton:hover {
+  transition: 0.2s;
+  background-color: #a9a7a7;
+}
+
+.deleteButton img {
+  width: 28px;
+  height: 28px;
+}

@@ -5,6 +5,8 @@ import SearchBar from "../components/SearchBar";
 import "./SpanishPage.css";
 import favouriteImg from "../assets/FavouriteImg.png";
 import { Link } from "react-router-dom";
+import deleteLogo from "../assets/delete.png";
+import axios from "axios";
 
 function SpanishPage({ food }) {
   const [search, setSearch] = useState("");
@@ -16,6 +18,18 @@ function SpanishPage({ food }) {
     const newToggledButtons = [...toggledButtons];
     newToggledButtons[index] = !newToggledButtons[index];
     setToggledButtons(newToggledButtons);
+  };
+
+  const handleDelete = async (id) => {
+    try {
+      await axios.delete(`https://sabores-ibericos.adaptable.app/foods/${id}`);
+
+      const newFoodList = food.filter((meal) => meal.id !== id);
+
+      setToggledButtons(Array(newFoodList.length).fill(false));
+    } catch (error) {
+      console.error("Error deleting the meal", error);
+    }
   };
 
   const spanishFood = food.filter((meal) => meal.country === "Spain");
@@ -38,6 +52,12 @@ function SpanishPage({ food }) {
               className={`btn-like ${toggledButtons[i] ? "on" : "off"}`}
             >
               <img src={favouriteImg} alt="like" />
+            </button>
+            <button
+              className="deleteButton"
+              onClick={() => handleDelete(meal.id)}
+            >
+              <img src={deleteLogo} alt="delete" />
             </button>
             <Link to={`/details/${meal.id}`}>
               <img className="cardImg" src={meal.image} alt={meal.foodName} />

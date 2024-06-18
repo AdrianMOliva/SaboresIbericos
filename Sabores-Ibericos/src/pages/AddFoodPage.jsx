@@ -23,7 +23,7 @@ function AddFoodPage({ food, setFood }) {
   const handleCountry = (e) => setCountry(e.target.value);
   const handleRegion = (e) => setRegion(e.target.value);
   const handleMeal = (e) => setMeal(e.target.value);
-  const handleNational = (e) => setNational(e.target.value);
+  const handleNational = (e) => setNational(e.target.checked);
   const handleRestaurants = (e) => setRestaurants(e.target.value);
 
   const handleAddFood = async (event) => {
@@ -54,45 +54,67 @@ function AddFoodPage({ food, setFood }) {
 
   return (
     <>
-      <form onSubmit={handleAddFood} className="formStyle">
-        <label>
-          Food Name:
-          <input type="text" value={foodName} onChange={handleFoodName} />
-        </label>
-        <label>
-          Description:
-          <input type="text" value={description} onChange={handleDescription} />
-        </label>
-        <label>
-          Image:
-          <input type="text" value={image} onChange={handleImage} />
-        </label>
-        <label>
-          Country:
-          <select>
-            <option value={country}>Portugal</option>
-            <option value={country}>Spain</option>
-          </select>
-        </label>
-        <label>
-          Type of meal:
-          <input type="text" value={meal} onChange={handleMeal} />
-        </label>
-        <label>
-          Region:
-          <input type="text" value={region} onChange={handleRegion} />
-        </label>
-        <label>
-          Restaurants:
-          <input type="text" value={restaurants} onChange={handleRestaurants} />
-        </label>
-        <label>
-          National:
-          <input type="checkbox" checked={national} onChange={handleNational} />
-        </label>
+      <div className="newItem">
+        <form onSubmit={handleAddFood} className="formStyle">
+          <label>
+            Food Name:
+            <input type="text" value={foodName} onChange={handleFoodName} />
+            <br></br>
+          </label>
+          <label>
+            Description:
+            <input
+              type="text"
+              value={description}
+              onChange={handleDescription}
+            />
+            <br></br>
+          </label>
+          <label>
+            Image:
+            <input type="text" value={image} onChange={handleImage} />
+            <br></br>
+          </label>
+          <label>
+            Country:
+            <select value={country} onChange={handleCountry}>
+              <option>-</option>
+              <option value={"Portugal"}>Portugal</option>
+              <option value={"Spain"}>Spain</option>
+            </select>
+            <br></br>
+          </label>
+          <label>
+            Type of meal:
+            <input type="text" value={meal} onChange={handleMeal} />
+            <br></br>
+          </label>
+          <label>
+            Region:
+            <input type="text" value={region} onChange={handleRegion} />
+            <br></br>
+          </label>
+          <label>
+            Restaurants:
+            <input
+              type="text"
+              value={restaurants}
+              onChange={handleRestaurants}
+            />
+            <br></br>
+          </label>
+          <label>
+            National:
+            <input
+              type="checkbox"
+              checked={national}
+              onChange={handleNational}
+            />
+          </label>
 
-        <button type="submit">Add</button>
-      </form>
+          <button type="submit">Add</button>
+        </form>
+      </div>
     </>
   );
 }
