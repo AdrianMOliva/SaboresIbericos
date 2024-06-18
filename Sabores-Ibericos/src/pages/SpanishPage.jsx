@@ -42,15 +42,16 @@ function SpanishPage({ food }) {
       const response = await axios.put(
         `https://sabores-ibericos.adaptable.app/foods/${mealId}`,
         {
+          id: mealId.id,
           toggled: newToggledButtons[index],
-          country: filteredFood.country,
-          foodName: filteredFood.foodName,
-          description: filteredFood.description,
-          region: filteredFood.region,
-          meal: filteredFood.meal,
-          image: filteredFood.image,
-          national: filteredFood.national,
-          restaurants: filteredFood.restaurants,
+          country: mealId.country,
+          foodName: mealId.foodName,
+          description: mealId.description,
+          region: mealId.region,
+          meal: mealId.meal,
+          image: mealId.image,
+          national: mealId.national,
+          restaurants: mealId.restaurants,
         }
       );
 
