@@ -15,9 +15,8 @@ import FavouritePage from "./pages/FavouritePage.jsx";
 
 function App() {
   const [food, setFood] = useState([]);
-  const [toggledButtons, setToggledButtons] = useState(
-    Array(food.length).fill(false)
-  );
+  const [toggledButtons, setToggledButtons] = useState([]);
+  
   useEffect(() => {
     const fetchFood = async () => {
       try {
@@ -26,6 +25,7 @@ function App() {
         );
 
         setFood(response.data);
+        setToggledButtons(Array(response.data.length).fill(false));
       } catch (err) {
         console.log("there is an error", err);
       }

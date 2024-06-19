@@ -1,11 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import "./AddFoodPage.css";
 import axios from "axios";
 
-function AddFoodPage({ food, setFood }) {
+function AddFoodPage() {
   const [foodName, setFoodName] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
