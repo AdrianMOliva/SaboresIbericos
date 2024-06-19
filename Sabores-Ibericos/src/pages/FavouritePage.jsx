@@ -3,7 +3,7 @@ import favouriteImg from "../assets/FavouriteImg.png";
 import { Link } from "react-router-dom";
 import "./FavouritePage.css";
 
-function FavouritePage({food}){
+function FavouritePage({food, toggledButtons, setToggledButtons}){
     const favouriteFood = food.filter((meal) => meal.toggled === true);
 
     const handleChange = async (index) => {
@@ -11,20 +11,20 @@ function FavouritePage({food}){
         newToggledButtons[index] = !newToggledButtons[index];
     
         try {
-          const mealId = filteredFood[index].id;
+          const mealId = favouriteFood[index].id;
           const response = await axios.put(
             `https://sabores-ibericos.adaptable.app/foods/${mealId}`,
             {
-              id: filteredFood[index].id,
+              id: favouriteFood[index].id,
               toggled: newToggledButtons[index],
-              country: filteredFood[index].country,
-              foodName: filteredFood[index].foodName,
-              description: filteredFood[index].description,
-              region: filteredFood[index].region,
-              meal: filteredFood[index].filteredFood[index],
-              image: filteredFood[index].image,
-              national: filteredFood[index].national,
-              restaurants: filteredFood[index].restaurants,
+              country: favouriteFood[index].country,
+              foodName: favouriteFood[index].foodName,
+              description: favouriteFood[index].description,
+              region: favouriteFood[index].region,
+              meal: favouriteFood[index].meal,
+              image: favouriteFood[index].image,
+              national: favouriteFood[index].national,
+              restaurants: favouriteFood[index].restaurants,
             }
           );
     

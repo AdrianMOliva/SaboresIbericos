@@ -1,8 +1,8 @@
 This is an App for Portuguese and Spanish food.
 
 Complete Restaurants data
-Make Delete button
-Do UpdateForm?
+
+Do Update
 ThemeChanging
 FavouritePage
 

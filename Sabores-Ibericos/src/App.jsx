@@ -15,6 +15,9 @@ import FavouritePage from "./pages/FavouritePage.jsx";
 
 function App() {
   const [food, setFood] = useState([]);
+  const [toggledButtons, setToggledButtons] = useState(
+    Array(food.length).fill(false)
+  );
   useEffect(() => {
     const fetchFood = async () => {
       try {
@@ -34,8 +37,8 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<PortuguesePage food={food} />} />
-        <Route path="/spanish-food" element={<SpanishPage food={food} />} />
+        <Route path="/" element={<PortuguesePage food={food} toggledButtons={toggledButtons} setToggledButtons={setToggledButtons} />} />
+        <Route path="/spanish-food" element={<SpanishPage food={food} toggledButtons={toggledButtons} setToggledButtons={setToggledButtons}/>} />
         <Route path="*" element={<NotFoundPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route
@@ -46,7 +49,7 @@ function App() {
           path="/add-food"
           element={<AddFoodPage food={food} setFood={setFood} />}
         />
-        <Route path="/favourites" element={<FavouritePage food={food}/>}/>
+        <Route path="/favourites" element={<FavouritePage food={food} toggledButtons={toggledButtons} setToggledButtons={setToggledButtons}/>}/>
       </Routes>
       
       <Footer />

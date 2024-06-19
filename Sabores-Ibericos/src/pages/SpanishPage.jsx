@@ -6,11 +6,9 @@ import { Link } from "react-router-dom";
 import deleteLogo from "../assets/delete.png";
 import axios from "axios";
 
-function SpanishPage({ food }) {
+function SpanishPage({ food, toggledButtons, setToggledButtons }) {
   const [search, setSearch] = useState("");
-  const [toggledButtons, setToggledButtons] = useState(
-    Array(food.length).fill(false)
-  );
+  
 
   const handleDelete = async (id) => {
     try {
