@@ -1,6 +1,4 @@
 import { useState } from "react";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 import SearchBar from "../components/SearchBar";
 import "./SpanishPage.css";
 import favouriteImg from "../assets/FavouriteImg.png";
@@ -42,16 +40,16 @@ function SpanishPage({ food }) {
       const response = await axios.put(
         `https://sabores-ibericos.adaptable.app/foods/${mealId}`,
         {
-          id: mealId.id,
+          id: filteredFood[index].id,
           toggled: newToggledButtons[index],
-          country: mealId.country,
-          foodName: mealId.foodName,
-          description: mealId.description,
-          region: mealId.region,
-          meal: mealId.meal,
-          image: mealId.image,
-          national: mealId.national,
-          restaurants: mealId.restaurants,
+          country: filteredFood[index].country,
+          foodName: filteredFood[index].foodName,
+          description: filteredFood[index].description,
+          region: filteredFood[index].region,
+          meal: filteredFood[index].meal,
+          image: filteredFood[index].image,
+          national: filteredFood[index].national,
+          restaurants: filteredFood[index].restaurants,
         }
       );
 
