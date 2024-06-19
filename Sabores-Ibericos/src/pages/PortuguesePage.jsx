@@ -43,7 +43,7 @@ function PortuguesePage({ food, toggledButtons, setToggledButtons }) {
           foodName: filteredFood[index].foodName,
           description: filteredFood[index].description,
           region: filteredFood[index].region,
-          meal: filteredFood[index].filteredFood[index],
+          meal: filteredFood[index].meal,
           image: filteredFood[index].image,
           national: filteredFood[index].national,
           restaurants: filteredFood[index].restaurants,
