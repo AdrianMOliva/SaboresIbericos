@@ -11,6 +11,7 @@ import FoodDetailsPage from "./pages/FoodDetailsPage.jsx";
 import AddFoodPage from "./pages/AddFoodPage.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
+import FavouritePage from "./pages/FavouritePage.jsx";
 
 function App() {
   const [food, setFood] = useState([]);
@@ -45,7 +46,9 @@ function App() {
           path="/add-food"
           element={<AddFoodPage food={food} setFood={setFood} />}
         />
+        <Route path="/favourites" element={<FavouritePage food={food}/>}/>
       </Routes>
+      
       <Footer />
     </>
   );

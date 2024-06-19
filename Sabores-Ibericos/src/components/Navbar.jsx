@@ -16,7 +16,9 @@ function Navbar() {
         <h1 className="spanishTitle">Spanish</h1>
       </Link>
       <div className="logosDiv">
+        <Link to="/favourites">
         <img src={heart} alt="heart" />
+        </Link>
         <Link to="/add-food">
           <img src={add} alt="add food" />
         </Link>

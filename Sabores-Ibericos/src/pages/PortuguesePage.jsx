@@ -39,16 +39,16 @@ function PortuguesePage({ food }) {
       const response = await axios.put(
         `https://sabores-ibericos.adaptable.app/foods/${mealId}`,
         {
-          id: mealId.id,
+          id: filteredFood[index].id,
           toggled: newToggledButtons[index],
-          country: mealId.country,
-          foodName: mealId.foodName,
-          description: mealId.description,
-          region: mealId.region,
-          meal: mealId.mealId,
-          image: mealId.image,
-          national: mealId.national,
-          restaurants: mealId.restaurants,
+          country: filteredFood[index].country,
+          foodName: filteredFood[index].foodName,
+          description: filteredFood[index].description,
+          region: filteredFood[index].region,
+          meal: filteredFood[index].filteredFood[index],
+          image: filteredFood[index].image,
+          national: filteredFood[index].national,
+          restaurants: filteredFood[index].restaurants,
         }
       );
 
