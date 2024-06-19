@@ -5,6 +5,7 @@
   padding: 20px;
   justify-content: center;
   align-items: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .aboutPage h2 {
@@ -20,7 +21,7 @@
 }
 
 .aboutPage a {
-  color: rgb(187, 125, 60, 255);
+  color: black;
   font-weight: bold;
   text-decoration: underline;
   display: block;

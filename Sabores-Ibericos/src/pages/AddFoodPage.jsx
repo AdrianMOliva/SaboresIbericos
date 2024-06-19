@@ -57,7 +57,6 @@ function AddFoodPage() {
           <label>
             Food Name:
             <input type="text" value={foodName} onChange={handleFoodName} />
-            <br></br>
           </label>
           <label>
             Description:
@@ -66,12 +65,10 @@ function AddFoodPage() {
               value={description}
               onChange={handleDescription}
             />
-            <br></br>
           </label>
           <label>
             Image:
             <input type="text" value={image} onChange={handleImage} />
-            <br></br>
           </label>
           <label>
             Country:
@@ -80,17 +77,14 @@ function AddFoodPage() {
               <option value={"Portugal"}>Portugal</option>
               <option value={"Spain"}>Spain</option>
             </select>
-            <br></br>
           </label>
           <label>
             Type of meal:
             <input type="text" value={meal} onChange={handleMeal} />
-            <br></br>
           </label>
           <label>
             Region:
             <input type="text" value={region} onChange={handleRegion} />
-            <br></br>
           </label>
           <label>
             Restaurants:
@@ -99,7 +93,6 @@ function AddFoodPage() {
               value={restaurants}
               onChange={handleRestaurants}
             />
-            <br></br>
           </label>
           <label>
             National:

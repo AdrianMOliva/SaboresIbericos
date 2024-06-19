@@ -10,10 +10,10 @@ function Navbar() {
     <div className="navbarclass">
       <img className="lightLogo" src={lightLogo} alt="light logo" />
       <Link to={"/"}>
-        <h1 className="portugueseTitle">Portuguese</h1>
+        <h1 className="portugueseTitle">portuguese</h1>
       </Link>
       <Link to={"/spanish-food"}>
-        <h1 className="spanishTitle">Spanish</h1>
+        <h1 className="spanishTitle">spanish</h1>
       </Link>
       <div className="logosDiv">
         <Link to="/favourites">

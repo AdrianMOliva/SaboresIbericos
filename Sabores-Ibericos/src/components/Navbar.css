@@ -1,8 +1,8 @@
 .navbarclass {
   display: flex;
   background-color: #fbf3f3;
-  border-bottom: 5px solid #bb7d3c;
-  height: 110px;
+  border-bottom: 2px solid #bb7d3c;
+  height: 130px;
   width: 100%;
   align-items: center;
 
@@ -15,8 +15,8 @@
 
 .lightLogo {
   position: absolute;
-  width: 110px;
-  height: 110px;
+  width: 130px;
+  height: 130px;
   left: 0;
   top: 0;
   align-items: left;
@@ -28,6 +28,9 @@
   align-items: center;
   margin-right: 50px;
   text-decoration: none;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding-top: 75px;
+  font-size:25px;
 }
 
 .spanishTitle {
@@ -35,19 +38,22 @@
   font-weight: bold;
   align-items: center;
   text-decoration: none;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding-top: 75px;
+  font-size: 25px;
 }
 .logosDiv {
   display: flex;
   background-color: #fbf3f3;
   position: absolute;
   right: 0;
-  top: 0;
-  height: 110px;
+  top: 10;
+  height: 90px;
 
   justify-content: space-between;
   align-items: right;
 }
 
 .logosDiv img {
-  height: 110px;
+  height: 90px;
 }

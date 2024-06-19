@@ -3,6 +3,7 @@
   justify-content: center;
   margin-top: 80px;
   background-color: #fbf3f3;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .pageContainer {
@@ -40,12 +41,14 @@
   background-color: azure;
   font-weight: bold;
   font-size: 12px;
-  color: black;
+  color: #bb7d3c;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 16px;
 }
 
-.backButton:hover {
-  background-color: #bb7d3c;
-  color: white;
+.backButton:hover {#bb7d3c
+  background-color: ;
+  color: black;
 }
 
 .infoContainer span {

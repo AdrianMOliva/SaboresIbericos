@@ -43,7 +43,7 @@ function FoodDetailsPage({ food, setFood }) {
             nav("/");
           }}
         >
-          {"<<Back"}
+          {"<<back"}
         </button>
       </div>
     </div>
