@@ -37,3 +37,16 @@ experience them and add your own if you wish.
 - NotFoundPage.jsx
 - PortuguesePage.jsx
 - SpanishPage.jsx
+
+# Links
+
+- Slides Link
+  https://docs.google.com/presentation/d/1OnJ2S9Xq9bUjQGV6fFlJzSqTEoqP5gRV0o1CzuGL9tk/edit#slide=id.g2e712e208ca_0_51
+
+- Github repositories
+  https://github.com/AdrianMOliva/SaboresIbericos
+  https://github.com/AdrianMOliva/SaboresIbericosData
+
+- Deployment Links:
+  https://sabores-ibericos.netlify.app/
+  https://sabores-ibericos.adaptable.app

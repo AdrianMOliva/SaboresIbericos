@@ -40,7 +40,7 @@ function FoodDetailsPage({ food, setFood }) {
         <button
           className="backButton"
           onClick={() => {
-            nav("/");
+            oneFood.country === "Spain" ? nav("/spanish-food") : nav("/");
           }}
         >
           {"<<back"}
